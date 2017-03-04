@@ -1,6 +1,6 @@
 # salt
 
-salt_states:
-  nginx:
+##salt_states:
+###nginx:
   - init.sls
   - install.sls
