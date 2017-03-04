@@ -1,0 +1,36 @@
+init:
+  pkg.installed:
+    - pkgs:
+      - gcc
+      - gcc-c++
+      - autoconf
+      - automake
+      - zlib
+      - zlib-devel
+      - openssl
+      - openssl-devel
+      - pcre
+      - pcre-devel
+      - libjpeg
+      - libjpeg-devel
+      - libpng
+      - libpng-devel
+      - freetype
+      - freetype-devel
+      - libxml2
+      - libxml2-devel
+      - glibc
+      - glibc-devel
+      - glib2
+      - glib2-devel
+      - bzip2
+      - bzip2-devel
+      - ncurses
+      - ncurses-devel
+      - curl
+      - curl-devel
+      - e2fsprogs
+      - e2fsprogs-devel
+      - krb5-devel
+      - libidn
+      - libidn-devel
