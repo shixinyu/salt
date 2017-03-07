@@ -16,9 +16,8 @@ nginx_service:
   file.managed:
     - name: /etc/init.d/nginx
     - user: root
-    - mod: 755
+    - mode: 755
     - source: salt://nginx/files/init.sh
-
   cmd.run:
     - name:
       - /sbin/chkconfig --add nginx

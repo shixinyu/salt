@@ -69,13 +69,17 @@ nginx_make:
       - make
     - require:
       - pkg: nginx_pkg
-nginx_install:
+nginx_makeinstall:
   cmd.run:
     - cwd: /opt/nginx-1.10.3
     - names:
       - make install
-      - mkdir /opt/server/webserver/nginx/temp
-      - chown -R nginx.nginx /opt/server/webserver/nginx/temp
     - require:
-      - pkg: nginx_pkg
       - cmd: nginx_make
+nginx_postinstall:
+  cmd.run:
+    - cwd: /opt/nginx-1.10.3
+    - names:
+      - mkdir /opt/server/webserver/nginx/temp -p && chown -R nginx.nginx /opt/server/webserver/nginx/temp
+    - require:
+      - cmd: nginx_makeinstall
