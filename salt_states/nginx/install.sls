@@ -74,6 +74,8 @@ nginx_install:
     - cwd: /opt/nginx-1.10.3
     - names:
       - make install
+      - mkdir /opt/server/webserver/nginx/temp
+      - chown -R nginx.nginx /opt/server/webserver/nginx/temp
     - require:
       - pkg: nginx_pkg
       - cmd: nginx_make
